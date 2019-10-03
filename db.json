@@ -1,0 +1,12 @@
+{
+  "todos": [
+    {
+      "title": "Go to bed on time",
+      "complete": false
+    },
+    {
+      "title": "Wake up early",
+      "complete": false
+    }
+  ]
+}

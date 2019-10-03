@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const chalk = require("chalk");
+const args = process.argv;
+const { validateArgs, usage, errorLog } = require("./validateArgs.js");
+const { newTodo, getTodo, completeTodo } = require("./todoActions.js");
+
+validateArgs();
+
+switch (args[2]) {
+  case "help":
+    usage();
+    break;
+  case "new":
+    newTodo();
+    break;
+  case "get":
+    getTodo();
+    break;
+  case "complete":
+    completeTodo();
+    break;
+  default:
+    errorLog("invalid command passed");
+    usage();
+}
